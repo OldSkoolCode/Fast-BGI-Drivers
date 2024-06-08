@@ -1,0 +1,43 @@
+
+
+#
+#
+#
+
+.asm.obj:
+	tasm $<
+
+makefile: bgidemo.exe mcga.bgi tvga.bgi egavga.bgi tseng.bgi detect.lib
+	touch makefile
+
+bgidemo.exe: bgidemo.c
+	bcc -v -ml bgidemo.c graphics.lib
+
+mcga.obj: bgidev.inc
+tvga.obj: bgidev.inc
+egavga.obj: bgidev.inc
+tseng.obj: bgidev.inc
+
+.obj.bgi:
+	tlink $*
+	exetobin $*
+	bh $*.bin $*.bgi $*
+
+
+detect.lib: detect.obj mcga_d.obj mono_d.obj
+	copy detect.lib ..
+
+detect.obj: detect.asm
+	tasm $*
+	tlib detect.lib +-$<
+
+mcga_d.obj: mcga_d.asm
+	tasm $*
+	tlib detect.lib +-$<
+
+mono_d.obj: mono_d.asm
+	tasm $*
+	tlib detect.lib +-$<
+	
+
+	

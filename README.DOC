@@ -1,0 +1,56 @@
+*******************************************************************
+
+    ISVGA256.BGI  --   A Super VGA BGI driver for Turbo C and Pascal
+                       that integrates support for multiple SVGA chipsets
+                       into one driver.
+
+                  --   Due to a limitation in both TC and TP you can't
+                       use setgraphmode() to set a mode higher than 0ah
+                       without patching the compilers.  A patch is supplied
+                       in this archive that, using Borland's PATCH.COM,
+                       will increase this limit to 40 modes.
+                       To install the patch just run the PATGRPTP.BAT file.
+                       Make sure Patch.com is in your search path.
+
+
+    To order send:  $45.00 to:
+                Thomas Design
+                P.O. Box 586
+                Stillwater Oklahoma
+                74076
+
+    Cards supported:  Video 7,  Paradise,  ATI,  Tecmar,  Orchid,  Genoa,
+                      Compaq VGA, HP VGA,  STB.
+             Others:  If your VGA card uses the SVGA chipset from either:
+                      Paradise, Tseng Labs, Chips 'n Tech, Trident, or
+                      video 7 your card will probably workwith these drivers.
+
+----------------------------------------------------------------------------
+
+---------------- Order form the drivers now available ------------
+       These drivers cost $45.00 per driver.  Mark with: __X__ for choice.
+
+ TWK256: TWK256.BGI   (uses tweaked VGA to provide from 320x200 to 400x600)
+                       (on register standard vga boards, not a Super VGA driver)
+      Turbo C:  _____
+ Turbo Pascal:  _____
+
+ ISVGA256.BGI  at cost of $45.00   (256 color SVGA driver for all SVGA boards)
+      Turbo C:  _____
+ Turbo Pascal:  _____
+
+ ISVGA16.BGI  at cost of $45.00    (16 color SVGA driver for all SVGA boards)
+      Turbo C:  _____
+ Turbo Pascal:  _____
+
+ HERCGW24.BGI  at cost of $45.00   (Hercules Graphics station BGI 24 bit color)
+      Turbo C:  _____
+ Turbo Pascal:  _____
+
+    Diskette form:    3 1/2" ____ 5 1/4" ____
+
+---------------------------------------------------------
+  Soon to come:   TIGA.BGI   --  Texas Instruments TIGA interface BGI
+                  HPPCL.BGI  --  HP LaserJet  PCL   (printer command language)
+                  HPGL.BGI   --  HP Plotter
+

@@ -1,0 +1,19 @@
+
+ Start  Stop   Length Name               Class
+
+ 00000H 00122H 00123H _TEXT              CODE
+ 00124H 00124H 00000H _DATA              DATA
+
+  Address         Publics by Name
+
+
+  Address         Publics by Value
+
+
+Line numbers for test.obj(TEST.ASM) segment _TEXT
+
+    15 0000:0100    16 0000:0103    18 0000:0105    19 0000:0107
+    22 0000:0109    23 0000:010D    25 0000:010F    26 0000:0110
+    27 0000:0111    29 0000:0114    30 0000:0117    32 0000:0119
+    33 0000:011C    35 0000:011E    36 0000:0121
+

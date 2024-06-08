@@ -1,0 +1,19 @@
+procedure reservedproc; external;
+{$L d:reserved.obj}
+
+procedure Initialize;
+{ Initialize graphics and report any errors that may occur }
+begin
+  { when using Crt and graphics, turn off Crt's memory-mapped writes }
+  DirectVideo := False;
+  OldExitProc := ExitProc;                { save previous exit proc }
+  ExitProc := @MyExitProc;                { insert our exit proc in chain }
+  if registerbgidriver(@reservedproc) < 0 then
+    halt(99);
+  GraphDriver :=  6;
+  GraphMode   := -1;
+  { The following is not needed for a registered driver, }
+  { but is needed for any other ReadOnly .BGI files }
+  system.filemode := 0;
+  InitGraph(GraphDriver, GraphMode, 'c:\turbo\pascal');  { activate graphics }
+

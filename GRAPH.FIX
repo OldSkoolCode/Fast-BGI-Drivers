@@ -1,0 +1,16 @@
+This replaces an earlier fix that caused more bugs than it repaired.  Unfortun-
+ately, the new fix requires patching GRAPH.TPU, and I have no idea if there are
+multiple versions on the market. So, (as usual) caveat emptor...
+
+DEBUG GRAPH.TPU
+D 69B2
+you should see 01 00 FF FF FF FF ...
+if not, use the S command to try to find it
+H 69B2 46
+or use another address if needed. note sum, in this case, 69F8
+E 69F8 FF
+W
+Q
+
+make DAMN sure you have a backup copy of GRAPH.TPU someplace!
+Good Luck!  -- Sam Denton
